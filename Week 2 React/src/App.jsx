@@ -1,15 +1,12 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import egimg from './assets/Easy Gameplay.png'
 import './App.css'
+import './cards/card_9.css'
+import './cards/card_9.jsx'
 
 const headerStyle = {
 	color:"white",
 }
-
-
-
 
 function App() {
   return (
@@ -46,7 +43,7 @@ function App() {
 				<br/>
 				<br/>
 				<br/>
-				<img src="/src/assets/Easy Gameplay.png"/>
+				<img src={egimg}/>
 			</div>
 			<div className="card">
 				<h2>10th Grade</h2>
@@ -96,6 +93,6 @@ function App() {
 	}
 
 
-export default App
+export default App;
 
 // npm run dev
