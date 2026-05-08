@@ -13,7 +13,7 @@ function Personal(){
                 <hr/>
                 <h2>Favorites</h2>
                 <p>Favorite food: Rice</p>
-                <p className='colored'>Favorite Color: Lavender</p>
+                <p id='colored'>Favorite Color: Lavender</p>
                 <br/>
                 <p>Favorite Game: Geometry Dash</p>
                 <p>Favorite animal: Cats</p>

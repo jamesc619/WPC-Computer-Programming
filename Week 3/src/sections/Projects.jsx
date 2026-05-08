@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import img1 from '/ezg0.png';
 import img2 from '/ezg1.png';
 import img3 from '/ezg2.png';
@@ -19,40 +19,44 @@ import img16 from '/EC10.png';
 
 
 function Projects(){
-const pythonSlides = [img1, img2, img3, img4, img5,img6];
+const pythonSlides = [img1, img2, img3, img4, img5, img6];
 const [pythonIndex, setPythonIndex] = useState(0);
 
-const nextPython = (direction) => {
-  setPythonIndex((prev) =>
-    (prev + direction + pythonSlides.length) % pythonSlides.length
-  );
-};
-
-// Java Slides
 const javaSlides = [img7, img8, img9, img10, img11, img12, img13, img14, img15, img16,];
 const [javaIndex, setJavaIndex] = useState(0);
 
-const nextJava = (direction) => {
-  setJavaIndex((prev) =>
-    (prev + direction + javaSlides.length) % javaSlides.length
-  );
-};
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setPythonIndex((prev) =>
+      (prev + 1) % pythonSlides.length
+    );
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setJavaIndex((prev) =>
+      (prev + 1) % javaSlides.length
+    );
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, []);
     return(
         <section>
             <div id="simpsons">
                 <div className="card">
-                    <h2>9th Grade</h2>
+                    <h2 className="white">9th Grade</h2>
                     <h3>"Easy Game"</h3>
                     <h4>By James Choy (me) and Timothy Qiu</h4>
                     <a href = "https://drive.google.com/file/d/1DrHyCNyyr0aGh4fmZPKaTHArFJCYtVdZ/view?usp=sharing">Download (Requires Python)</a>
                     <br/>
                     <br/>
                     <div className = "slideWrap">
-                        <img src = { pythonSlides[pythonIndex] } className = "slideImg" alt = "Python project slide" />
-                        <div className = "slideControls">
-                            <button onClick = { () => nextPython(-1) } className = "slideBtn">←</button>
-                            <button onClick = { () => nextPython(1) } className = "slideBtn">→</button>
-                         </div>
+                        <img key={pythonIndex} src = { pythonSlides[pythonIndex] } className = "slideImg fade" alt = "Python project slide" />
                     </div>
                 </div>
                 <div className="card">
@@ -66,11 +70,7 @@ const nextJava = (direction) => {
                     <h2>11th Grade</h2>
                     <h3>Encrpytion Project</h3>
                     <div className = "slideWrap">
-                        <img src = { javaSlides[javaIndex] } className = "slideImg" alt = "Java project slide" />
-                        <div className = "slideControls">
-                        <button onClick = { () => nextJava(-1) } className = "slideBtn">←</button>
-                        <button onClick = { () => nextJava(1) } className = "slideBtn">→</button>
-                        </div>
+                        <img key={javaIndex} src = { javaSlides[javaIndex] } className = "slideImg fade" alt = "Java project slide" />
                     </div>
                     <br/>
                     <a href = "https://drive.google.com/file/d/1dtfSEFdAT4UWnCEKsnbVGD26T2qwHb7v/view?usp=sharing">Download (Requires Java)</a>
