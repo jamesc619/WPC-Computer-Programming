@@ -15,7 +15,7 @@ import img13 from '/EC7.png';
 import img14 from '/EC8.png';
 import img15 from '/EC9.png';
 import img16 from '/EC10.png';
-
+import img17 from '/img.png';
 
 
 function Projects(){
@@ -61,10 +61,20 @@ useEffect(() => {
                 </div>
                 <div className="card">
                     <h2>10th Grade</h2>
+                    <div className="githubLink">
                     <h3>Country Website</h3>
-                    <a href = "https://jamesc619.github.io/Country_website/" target="_blank">Link</a>
+                    <a href = "https://jamesc619.github.io/Country_website/" target="_blank">
+                        <img src={img17}/>
+                        <span>Link</span>
+                    </a>
+                    </div>
+                    <div className="githubLink">
                     <h3>NYC OpenData Project</h3>
-                    <a href = "https://jamesc619.github.io/311-Project/index.html" target="_blank">Link</a>
+                    <a href = "https://jamesc619.github.io/311-Project/index.html" target="_blank">
+                      <img src={img17}/>
+                      <span>Link</span>
+                    </a>
+                    </div>
                 </div>
                 <div className="card">
                     <h2>11th Grade</h2>

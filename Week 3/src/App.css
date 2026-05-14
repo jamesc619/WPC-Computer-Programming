@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,body{
   margin:0 auto;
   font-family:Arial;
@@ -67,20 +71,51 @@ nav a:hover{
   flex:1;
   margin:10px;
   padding:10px;
-  border:1px solid gray;
+  border:2px solid #666;
   text-align:center;
   max-width:500px;
   max-height:500px;
   background-color:#747474;
+  border-radius:1rem;
 }
+a img{
+  width:25px;
+  height:25px;
+}
+
+.githubLink {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 2px solid #666;
+  justify-content: space-between;
+  align-items: center;
+  padding:1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 1rem;
+}
+
+.githubLink a {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.githubLink h3 {
+  font-size:1rem;
+}
+
 
 .card a{
   text-decoration:none;
-  background-color:blue;
+  background-color:rgb(63, 123, 233);
   color:white;
   border-radius:4px;
-  padding:6px;
+
+  padding: 6px;
   box-shadow:2px 2px 2px black;
+  min-width:100px;
 }
 .card a:hover{
   background-color:cornflowerblue;
