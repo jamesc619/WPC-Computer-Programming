@@ -46,13 +46,13 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, []);
     return(
-        <section>
+        <section id="sixseven">
             <div id="simpsons">
                 <div className="card">
                     <h2 className="white">9th Grade</h2>
                     <h3>"Easy Game"</h3>
                     <h4>By James Choy (me) and Timothy Qiu</h4>
-                    <a href = "https://drive.google.com/file/d/1DrHyCNyyr0aGh4fmZPKaTHArFJCYtVdZ/view?usp=sharing">Download (Requires Python)</a>
+                    <a class="button" href = "https://drive.google.com/file/d/1DrHyCNyyr0aGh4fmZPKaTHArFJCYtVdZ/view?usp=sharing" target="_blank">Download (Requires Python)</a>
                     <br/>
                     <br/>
                     <div className = "slideWrap">
@@ -83,9 +83,13 @@ useEffect(() => {
                         <img key={javaIndex} src = { javaSlides[javaIndex] } className = "slideImg fade" alt = "Java project slide" />
                     </div>
                     <br/>
-                    <a href = "https://drive.google.com/file/d/1dtfSEFdAT4UWnCEKsnbVGD26T2qwHb7v/view?usp=sharing">Download (Requires Java)</a>
+                    <a href = "https://drive.google.com/file/d/1dtfSEFdAT4UWnCEKsnbVGD26T2qwHb7v/view?usp=sharing" target="_blank">Download (Requires Java)</a>
                     <h3>Target Shooter Game</h3>
-                    <a href = "https://drive.google.com/file/d/1bXH7jzyu9CsIyJYqrQrAi1FPdGLnhC80/view?usp=sharing">Download (Requires Java)</a>
+                    <a href = "https://drive.google.com/file/d/1bXH7jzyu9CsIyJYqrQrAi1FPdGLnhC80/view?usp=sharing" target="_blank">Download (Requires Java)</a>
+                    <br></br>
+                    <br></br>
+                    
+                    <em>More Coming Soon...</em>
                 </div>
 		</div>
 		<hr/>

@@ -6,6 +6,8 @@ html,body{
   margin:0 auto;
   font-family:Arial;
   background-color:rgba(82, 66, 79, 0.336);
+  position:relative;
+  z-index:-2;
 }
 .container{
   display:flex;
@@ -21,6 +23,7 @@ nav{
   position:sticky !important;
   top:0;
   background-color:rgb(63, 123, 233);
+  z-index:1000;
 }
 nav a{
   color:black;
@@ -28,6 +31,8 @@ nav a{
   flex:1;
   text-decoration:none;
   text-align:center;
+  position:relative;
+  z-index:1000;
 }
 nav a:hover{
   background-color:rgb(153, 185, 245);
@@ -49,17 +54,16 @@ nav a:hover{
 #footer{
   background-color:rgb(237, 182, 100);
   color:black;
-  position:fixed;
-  left: 0;
-  right: 0;
-  bottom:0px;
   justify-content:center;
   align-items:center;
+  flex-direction:column;
   display:flex;	
 }
  
 .marginated{
   margin: 10px;
+  position:relative;
+  z-index:1;
 }
 
 .antimargin{
@@ -67,17 +71,7 @@ nav a:hover{
 	padding: 5px;
 }
 
-.card{
-  flex:1;
-  margin:10px;
-  padding:10px;
-  border:2px solid #666;
-  text-align:center;
-  max-width:500px;
-  max-height:500px;
-  background-color:#747474;
-  border-radius:1rem;
-}
+
 a img{
   width:25px;
   height:25px;
@@ -112,13 +106,31 @@ a img{
   background-color:rgb(63, 123, 233);
   color:white;
   border-radius:4px;
-
   padding: 6px;
   box-shadow:2px 2px 2px black;
   min-width:100px;
+  position:relative;
+  z-index:200;
+}
+
+.button{
+  text-decoration:none;
+  background-color:rgb(63, 123, 233);
+  color:white;
+  border-radius:4px;
+  padding: 6px;
+  box-shadow:2px 2px 2px black;
+  min-width:100px;
+  position:relative;
+  z-index:2200;
+}
+.button:hover{
+  background-color:cornflowerblue;
+  cursor:pointer;
 }
 .card a:hover{
   background-color:cornflowerblue;
+  cursor:pointer;
 }
 
 .card img{
@@ -136,8 +148,10 @@ a img{
 }
 #simpsons{
   display:flex;
-  flex:1;
   justify-content:center;
+  flex-wrap:wrap;
+  position:relative;
+  z-index:-10000;
 }
 
 #colored{
@@ -157,14 +171,19 @@ h6{
 li{
   color:white;
 }
+ul{
+  list-style:none;
+}
 
 #root{
   width:100vw !important;
 }
 
+
 .nav{
   position:sticky;
   top:0;
+  z-index:1184123;
 }
 
 .slideBtn{
@@ -215,10 +234,67 @@ li{
   position: relative;
   width: 100%;
   overflow: hidden;
+  z-index:0;
 }
 
 .slideImg {
   width: 100%;
   border-radius: 3px;
   animation: fade 3s linear;
+}
+.slideImg img{
+  position:relative;
+  z-index: -1;
+}
+
+
+#bigdisplay{
+  width:638px;
+  height:825px;
+}
+
+#sixseven{
+  position:relative;
+  z-index:-1;
+}
+
+.card{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:2px solid #666;
+  text-align:center;
+  max-width:500px;
+  max-height:500px;
+  background-color:#747474;
+  border-radius:1rem;
+  position:relative;
+  z-index:-1;
+}
+[data-theme="dark"] {
+  --bg: #4f46538a;
+  --h1: white;
+  --h2: white;
+  --h3: white;
+  --h4: white;
+  --h5: white;
+  --h6: white; 
+  --text: white;
+  --button: #333;
+}
+
+em{
+  color:white;
+}
+
+#personal{
+  display:flex;
+}
+.intrestscontainer{
+  width:300px;
+  flex:1;
+  flex-direction:row;
+  border:2px solid black;
+  border-radius:1rem ;
+  justify-content:center;
 }
